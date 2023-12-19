@@ -18,39 +18,40 @@ kill_timeout = "2m0s"
     hard_limit = 25
     soft_limit = 20
 
-[[services]]
-  protocol = "udp"
-  internal_port = 7000
+# [[services]]
+#   protocol = "udp"
+#   internal_port = 7000
 
-  [[services.ports]]
-    port = 7000
-  [services.concurrency]
-    type = "connections"
-    hard_limit = 25
-    soft_limit = 20
+#   [[services.ports]]
+#     port = 7000
+#   [services.concurrency]
+#     type = "connections"
+#     hard_limit = 25
+#     soft_limit = 20
 
-[[services]]
-  protocol = "udp"
-  internal_port = 7001
+# [[services]]
+#   protocol = "udp"
+#   internal_port = 7001
 
-  [[services.ports]]
-    port = 7001
-  [services.concurrency]
-    type = "connections"
-    hard_limit = 25
-    soft_limit = 20
+#   [[services.ports]]
+#     port = 7001
+#   [services.concurrency]
+#     type = "connections"
+#     hard_limit = 25
+#     soft_limit = 20
 
 # frp TCP server
-#[[services]]
-#  protocol = "tcp"
-#  internal_port = 7000
-#
-#  [[services.ports]]
-#    port = 7000
-#  [services.concurrency]
-#    type = "connections"
-#    hard_limit = 25
-#    soft_limit = 20
+[[services]]
+ protocol = "tcp"
+ internal_port = 7000
+
+ [[services.ports]]
+   port = 7000
+ [services.concurrency]
+   type = "connections"
+   hard_limit = 25
+   soft_limit = 20
+   
 [[services]]
   protocol = "tcp"
   internal_port = 25565
