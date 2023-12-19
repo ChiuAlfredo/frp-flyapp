@@ -5,7 +5,7 @@
 # quicBindPort = 7001
 
 # frp TCP connection
-bindAddr = "0.0.0.0"
+bindAddr = "fly-global-services"
 bindPort = 7000
 
 # frp dashboard
