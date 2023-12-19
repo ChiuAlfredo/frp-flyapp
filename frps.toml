@@ -5,8 +5,8 @@ kcpBindPort = 7000
 quicBindPort = 7001
 
 # frp TCP connection
-#bindAddr = "0.0.0.0"
-#bindPort = 7000
+bindAddr = "0.0.0.0"
+bindPort = 7000
 
 # frp dashboard
 webServer.addr = "::"
