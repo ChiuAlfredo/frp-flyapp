@@ -1,3 +1,10 @@
+# fly.toml app configuration file generated for frpntust on 2023-12-19T08:15:48Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "frpntust"
+primary_region = "sin"
 kill_signal = "SIGTERM"
 kill_timeout = "2m0s"
 
@@ -11,7 +18,6 @@ kill_timeout = "2m0s"
     hard_limit = 25
     soft_limit = 20
 
-# frp KCP server
 [[services]]
   protocol = "udp"
   internal_port = 7000
@@ -23,7 +29,6 @@ kill_timeout = "2m0s"
     hard_limit = 25
     soft_limit = 20
 
-# frp QUIC server
 [[services]]
   protocol = "udp"
   internal_port = 7001
@@ -46,9 +51,6 @@ kill_timeout = "2m0s"
 #    type = "connections"
 #    hard_limit = 25
 #    soft_limit = 20
-
-# frp data plane
-# frp TCP tunnel (example for Minecraft Java server, requires proxyBindAddr = "0.0.0.0" (or "::" in IPv6) in frps.toml)
 [[services]]
   protocol = "tcp"
   internal_port = 25565
@@ -59,18 +61,6 @@ kill_timeout = "2m0s"
     type = "connections"
     hard_limit = 25
     soft_limit = 20
-
-# frp UDP tunnel (example for Minecraft Bedrock server, requires proxyBindAddr = "fly-global-services" in frps.toml)
-#[[services]]
-#  protocol = "udp"
-#  internal_port = 19132
-#
-#  [[services.ports]]
-#    port = 19132
-#  [services.concurrency]
-#    type = "connections"
-#    hard_limit = 25
-#    soft_limit = 20
 
 [[vm]]
   cpu_kind = "shared"

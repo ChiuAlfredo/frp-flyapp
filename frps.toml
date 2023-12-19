@@ -1,6 +1,6 @@
 # Control plane binding
 # frp KCP/QUIC connection
-bindAddr = "fly-global-services"
+# bindAddr = "fly-global-services"
 # kcpBindPort = 7000
 # quicBindPort = 7001
 
